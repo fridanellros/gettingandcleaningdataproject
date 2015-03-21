@@ -7,7 +7,7 @@ output: html_document
 # README for Getting and Cleaning Data course project
 
 ## Instructions
-To achieve the output dataframe2.txt, described by the CodeBook.md file,
+To achieve the output averagedMeanAndStdData.txt, described by the CodeBook.md file,
 run the script 'run_analysis.R' in working directory containing the 
 Activity Recognition data set provided at [this web page](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
