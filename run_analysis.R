@@ -38,6 +38,7 @@ activity <- factor( activity$activity,
 data.set.1  <-  cbind( subject, activity, u.std.feat.vec )
 
 ## Average over subject and activity
+library(dplyr)
 data.set.2  <-  data.set.1 %>% 
                 group_by( subject, activity ) %>% 
                 summarise_each( funs(mean) )
