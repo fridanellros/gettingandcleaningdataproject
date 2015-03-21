@@ -4,7 +4,7 @@ author: "Frida Nellros"
 date: '2015-03-21'
 output: html_document
 ---
-
+# README for Getting and Cleaning Data course project
 
 ## Instructions
 To achieve the output dataframe2.txt, described by the CodeBook.md file,
@@ -17,19 +17,39 @@ extract the files.
 For further analysis of the outputted results, load the data frame using the
 following command:
 ```{r}
-data <- read.table( "dataframe2.txt",header = TRUE )
+data <- read.table( 'averagedMeanAndStdData.txt",header = TRUE )
 ```
 
-Or, running all described scripts:
+Or, to run all described scripts:
 ```{r}
-source(retrieve_data.R)
-source(run_analysis.R)
+source("retrieve_data.R")
+source("run_analysis.R")
 rm(list=ls()) #to clear all that heavy data from in memory
-data <- read.table( "dataframe2.txt",header = TRUE ) #to reload results
+data <- read.table( "averagedMeanAndStdData.txt",header = TRUE ) #to reload results
 ```
 
 ## File contents
 
+### retrieve_data.R
+```{r}
+d.url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file( d.url, "Dataset.zip", method = "curl" )
+unzip( "Dataset.zip" )
+```
 
+### run_analysis.R
+Performs the following steps:
+
+1. Read metadata (such as variable names)
+2. Read raw data
+3. Merge test and train data
+4. Extract relevant mean and std variables
+5. Re-label activity as text instead of number
+6. Merge all variables into a data frame
+7. Set column names
+8. Average over subject and activity
+
+## Requirements
+dplyr package
 
 
