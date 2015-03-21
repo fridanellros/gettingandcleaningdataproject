@@ -58,7 +58,7 @@ The two variables for which the below features have been averaged over:
 The features are named in accordance with the original data set, but with some
 modifications (removing (,) and -):
 
-<feautre>-<mean/std><possibly X,Y or Z if coordinate specific>
+featurename + '-' + mean/std + possibly X,Y or Z if coordinate specific
 
 #### Original features description
 
